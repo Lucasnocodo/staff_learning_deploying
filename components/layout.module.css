@@ -1,0 +1,39 @@
+.layout {
+    padding-top: 64px;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+    height: 100%;
+    padding: 50px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+}
+
+.center {
+    margin-top: 35px !important;
+}
+
+.card {
+    padding: 20px;
+}
+
+.level_layout {
+    padding: 30px;
+}
+
+.level_img {
+    text-align: center;
+}

@@ -1,0 +1,169 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "react-hooks",
+    "eslint-comments",
+    "promise",
+    "unicorn"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "__PROD__": true,
+    "__BUILDINCONFIG__": true,
+    "__CONFIG__": true,
+    "i18n": true
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true,
+      "ecmascript": 6,
+      "jsx": true,
+      "legacyDecorators": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "no-console": [2, {"allow": ["warn", "error"]}],
+    "arrow-parens": [0, "as-needed"],
+    "comma-dangle": ["error", {
+      "arrays": "only-multiline",
+      "objects": "only-multiline",
+      "imports": "only-multiline",
+      "exports": "only-multiline",
+      "functions": "never"
+    }],
+    "no-confusing-arrow": 0,
+    "no-plusplus": 0,
+    "camelcase": [0, { "properties": "always" }],
+    "semi": [2, "never"],
+    "global-require": 0,
+    "no-param-reassign": ["error", { "props": false }],
+    "object-property-newline": 0,
+    "no-mixed-operators": [
+        "error",
+        {
+            "groups": [
+                ["*", "/", "%", "**"],
+                ["&", "|", "^", "~", "<<", ">>", ">>>"],
+                ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+                ["&&", "||"],
+                ["in", "instanceof"]
+            ],
+            "allowSamePrecedence": true
+        }
+    ],
+    "implicit-arrow-linebreak": 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js"]}],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^ignore",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "lines-between-class-members": 0,
+    "no-void": 0,
+    "no-bitwise": ["error", { "int32Hint": true }],
+    "no-prototype-builtins": 0,
+    "no-restricted-syntax": 0,
+    "no-nested-ternary": 0,
+    "valid-typeof": 0,
+    "object-curly-newline": 0,
+    "function-paren-newline": 0,
+    "prefer-destructuring": [0, {"object": true, "array": false}],
+    "react/forbid-prop-types": 0,
+    "react/prop-types": "off",
+    "react/destructuring-assignment": 0,
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".tsx"] }],
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-closing-bracket-location": [
+        2, {"selfClosing": "after-props", "nonEmpty": "after-props"}
+    ],
+    "react/prefer-stateless-function": 0,
+    "react/require-default-props": 0,
+    "react/state-in-constructor": 0,
+    "react/sort-comp": [1, {
+      "order": [
+        "static-methods",
+        "lifecycle",
+        "/^awaitScripts$/",
+        "/^initialize.+$/",
+        "/^load.+$/",
+        "/^reset.+$/",
+        "/^handle.+$/",
+        "everything-else",
+        "rendering"
+      ],
+      "groups": {
+        "rendering": [
+          "/^render.+$/",
+          "render"
+        ]
+      }
+    }],
+    "react/display-name": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-use-before-define": [
+      "error",
+      { "functions": false, "classes": true, "variables": true }
+    ],
+    // Common abbreviations are known and readable
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/no-null": 0,
+    "unicorn/no-fn-reference-in-iterator": 0,
+    "eslint-comments/disable-enable-pair": ["error", {"allowWholeFile": true}],
+    "unicorn/catch-error-name": [
+      "warn",
+      {
+        "name": "err",
+        "caughtErrorsIgnorePattern": "^_$"
+      }
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "kebabCase": true,
+          "pascalCase": true,
+          "camelCase": true
+        },
+        "ignore": [
+          "API"
+        ]
+      }
+    ],
+    "unicorn/consistent-function-scoping": 0,
+    "unicorn/no-reduce": 0,
+    "unicorn/no-useless-undefined": 0,
+    "import/extensions": 0,
+    "array-callback-return": [
+			"error",
+			{
+				"allowImplicit": true
+			}
+		]
+  }
+}

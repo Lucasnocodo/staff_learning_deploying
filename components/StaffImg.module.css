@@ -1,0 +1,30 @@
+.layout {
+    position: absolute;
+    pointer-events: none;
+    /* z-index: -1; */
+    opacity: 1;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* background-color: #efefef; */
+    height: 80px;
+    overflow: visible;
+}
+
+.layout:hover {
+    z-index: 3;
+}
+
+.line {
+    height: 2px;
+    width: 19px;
+    background-color: black;
+    position: relative;
+    top: -23px;
+    left: 23px;
+}
+
+.svgPart:hover {
+    opacity: 0.8;
+    z-index: 2;
+}
